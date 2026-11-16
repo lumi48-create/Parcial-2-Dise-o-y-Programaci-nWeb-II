@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afiche · Graffiti en el Subte Maldito</title>
+    <link rel="stylesheet" href="css/afiche.css">
+
+    <!-- generador de códigos QR -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <!-- AFICHE: es la gráfica que se imprime o se muestra en pantalla -->
+    <main class="afiche">
+        <span class="etiqueta">EXPERIENCIA 3D · SOLO EN CELULAR</span>
+
+        <h1 class="titulo">GRAFFITI EN EL<br><span>SUBTE MALDITO</span></h1>
+        <p class="bajada">Entrá a una estación embrujada, rociá las paredes y subí de nivel antes de que te agarre el guardia fantasma.</p>
+
+        <section class="qr-bloque">
+            <div class="qr-marco"><div id="qr"></div></div>
+            <p class="qr-texto">ESCANEÁ CON LA CÁMARA DE TU CELU</p>
+            <p id="url-visible" class="url"></p>
+        </section>
+
+        <section class="columnas">
+            <div class="columna">
+                <h2>¿Qué vas a encontrar?</h2>
+                <ul>
+                    <li>🚇 Un andén de subte en 3D, en primera persona</li>
+                    <li>🎨 Paredes con palabras para pintar con aerosol</li>
+                    <li>📈 Niveles cada vez más difíciles</li>
+                    <li>🎃 Calabazas que regalan tiempo</li>
+                    <li>👻 Un guardia fantasma que te asusta si tardás</li>
+                </ul>
+            </div>
+            <div class="columna">
+                <h2>Cómo se juega</h2>
+                <ol>
+                    <li><b>Mové el celu</b> para mirar alrededor (giroscopio).</li>
+                    <li><b>Caminá de verdad</b> o mantené 👣 para acercarte a la pared.</li>
+                    <li><b>Tocá la pared</b> para rociar. Elegí el color de la lata.</li>
+                    <li><b>Tocá las calabazas</b> para ganar +4 segundos.</li>
+                    <li><b>Completá la palabra</b> y pasá de nivel.</li>
+                </ol>
+            </div>
+        </section>
+
+        <footer class="pie">🔊 Subí el volumen &nbsp;·&nbsp; 📍 Pará en un lugar despejado &nbsp;·&nbsp; 👻 No juegues solo</footer>
+    </main>
+
+    <!-- PANEL DE CONTROL: no se imprime -->
+    <aside class="panel no-imprimir">
+        <h2>Generar el QR</h2>
+        <p>Pegá acá la URL pública del juego (Vercel, Netlify o GitHub Pages) y el QR se actualiza solo.</p>
+        <input id="campo-url" type="url" placeholder="https://tu-juego.vercel.app/" autocomplete="off" spellcheck="false">
+        <div class="panel-botones">
+            <button id="btn-actualizar" type="button">Actualizar QR</button>
+            <button id="btn-descargar" type="button">Descargar QR (PNG)</button>
+            <button id="btn-imprimir" type="button">Imprimir / guardar PDF</button>
+        </div>
+        <p id="aviso-url" class="panel-aviso"></p>
+    </aside>
+
+    <script src="js/afiche.js"></script>
+</body>
+
+</html>
